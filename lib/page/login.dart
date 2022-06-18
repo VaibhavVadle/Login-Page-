@@ -1,4 +1,5 @@
 
+import 'package:authentication/page/forgetpassword.dart';
 import 'package:authentication/page/homepage.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -216,9 +217,17 @@ class _loginState extends State<login> {
                               createuser();
                             },
                             child: Text('SignUp')),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            TextButton(
+                                onPressed:(){
+                                  Navigator.push(context, MaterialPageRoute(builder: (context) => ForgotPassword()));
 
-
-
+                                },
+                                child: Text('Forgot password ?'))
+                          ],
+                        )
 
                       ],
 
